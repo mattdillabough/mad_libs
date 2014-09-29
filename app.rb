@@ -14,7 +14,7 @@ get '/:id' do
   db = SQLite3::Database.new 'mad_libs.sqlite'
   @mad_libs = db.execute('SELECT id, title, description, content FROM mad_libs WHERE id=?', [params[:id]])
   
-  erb :_mad_lib_content
+  erb :mad_libs
 end
 
 get '/admin' do
