@@ -5,25 +5,16 @@
   <p id="title-text"> Angry Libs </p>
 </div>
 
-<div id="content">  
-  <div id="category-panel">
-    <a class="category" href="/"> Category 1 </a>
-    <a class="category" href="/"> Category 2 </a>
-    <a class="category" href="/"> Category 3 </a>
-    <a class="category" href="/"> Category 4 </a>
-    <a class="category" href="/"> Category 5 </a>
-  </div>
+<div id="content">
+  <a href="/admin"> Administrator Page</a>
   
-  <div id="content-panel">
+  <% @mad_libs.each do | mad_lib | %>
     <div class="mad-lib">
-      <p class="mad-lib-title"> Angry Lib Title </p>
-      <p class="mad-lib-text"> Here is the actual mad-lib text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  </p>
-      <button class="try-mad-lib" type="button"> Try It Out! </button>
+      <p class="mad-lib-title"> <%= mad_lib[1] %> </p>
+      <p class="mad-lib-description"> <%= mad_lib[2] %> </p> <br>  
+      <form method="get" action="/<%= mad_lib[0] %>">
+        <button type="submit">Do this angry lib!</button>
+      </form>
     </div>
-    <div class="mad-lib">
-      <p class="mad-lib-title"> Angry Lib Title </p>
-      <p class="mad-lib-text"> Here is the actual mad-lib text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  </p>
-      <button class="try-mad-lib" type="button"> Try It Out! </button>
-    </div>
-  </div>
+  <% end %>
 </div>

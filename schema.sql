@@ -1,0 +1,1 @@
+CREATE TABLE mad_libs (id INTEGER PRIMARY KEY AUTOINCREMENT, title, description, content);

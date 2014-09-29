@@ -1,14 +1,16 @@
 body {
   margin: 0px;
   background-color: #585858;
-  min-width: 1250px;
 }
 
 #title-bar {
+  margin: 0 auto;
+  width: 1000px;
   height: 70px;
-  width; 100%;
   background-color: #A4A4A4;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 #title-text {
@@ -19,64 +21,32 @@ body {
 }
 
 #content {
-  width: 100%;
-}
-
-.mad-lib-title {
-  margin: 5px;
-  text-align: center;
-  font-family: arial;
-}
-
-.mad-lib-text {
-  text-indent: 25px;
-  font-family: arial;
-  margin: 5px 5px;
-}
-
-.try-mad-lib {
-  font-size: 15px;
-  font-family: arial;
-  padding: 3px;
-  margin: 0px 0px 10px 45%;
-}
-
-#content-panel {
-  float: left;
-  margin: 25px 25px 25px 200px;
-  background-color: #A4A4A4;
-  border: 1px solid #000000;
+  margin: 25px auto;
+  width: 750px;
+  height: 2000px;
+  background-color:  #A4A4A4;
+  border: 1px solid #000;
   border-radius: 5px;
-  width: 75%;
-  height: 750px;
 }
 
 .mad-lib {
-  width: 80%;
-  margin: 25px auto;
-  background-color: #585858;
-  border: 1px solid #000000;
+  background-color: #FFF;
+  border: 1px solid #000;
+  font-size: 18px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
-#category-panel {
-  position: absolute;
-  margin: 25px 75px 25px 0px;
-  width: 100px;
-  float: left;
+.mad-lib-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
-.category {
-  float: left;
-  width: 100px;
-  margin: 0px 0px 10px 0px;
-  padding: 15px 50px 15px 10px;
-  background-color: #A4A4A4;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-  border-right: 1px solid #000000;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: #000000;
-  text-decoration: none;
-  font-family: arial;
+.mad-lib-description {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
