@@ -1,26 +1,21 @@
-<% content_for :stylesheets do %>
-  <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+<% @mad_lib_info.each do | mad_lib | %>
+  <div class="mad-lib">
+    <p class="mad-lib-title"> <%= mad_lib[1] %> </p>
+    <p class="mad-lib-description"> <%= mad_lib[2] %> </p> <br>   
+  </div>
 <% end %>
 
-<!--<% patterns = [ noun = /:noun/, adjective = /:adjective/, verb = /:verb/, pronoun = /:pronoun/ ] %>-->
-
-<div id="title-bar">
-  <p id="title-text"> Angry Libs </p>
-</div>
-
-<div id="content">
-  <a href="/admin"> Administrator Page</a>
-  
-  <% @mad_libs.each do | mad_lib | %>
-    <div class="mad-lib">
-      <p class="mad-lib-title"> <%= mad_lib[1] %> </p>
-      <p class="mad-lib-description"> <%= mad_lib[2] %> </p> <br   
-    </div>
-    <form method="POST">
-      <!--Here we would do a .each do kind of thing for each row in the database that would be created for each madlib-->
-      <!--For each match between the pattern and content, a text box will be created -->
-      <input type="submit" value="Submit">
-    </form>
-  <% end %>
+<div class="input-area">
+  <form method="POST">
+    <% @pattern_array.each do | inputs | %>
+      <div class="query-term">  
+        <b class="label">
+          <%= inputs %>
+        </b>
+        <input name="input_array[]"><br>
+      </div>
+    <% end %>
+    <input class="create-button" type="submit" value="Create">
+  </form>
 </div>
 

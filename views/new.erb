@@ -1,19 +1,10 @@
-<% content_for :stylesheets do %>
-  <link rel="stylesheet" type="text/css" href="/css/index.css"/>
-<% end %>
-<div id="title-bar">
-  <p id="title-text"> Angry Libs </p>
-</div>
-
-<div id="content">
-  <div id="new-mad-lib">
-    <form method="POST">
-      <b>Title:</b><input name="title"><br>
-      <b>Description:</b><input name="description"><br><br>
-      <b>Text:</b><br> <textarea name="content" rows=5 cols=80> </textarea><br>
-      <input type="submit" value="Create">
-    </form>
-  </div>
+<div id="new-mad-lib">
+  <form method="POST">
+    <b>Title:</b><input name="title"><br>
+    <b>Description:</b><input name="description"><br>
+    <b>Text:</b><br> <textarea name="content" rows="5" cols="80"> </textarea><br>
+    <input type="submit" value="Create">
+  </form>
 </div>
 
 

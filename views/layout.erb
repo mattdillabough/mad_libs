@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= yield_content :stylesheets %>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title> Mad Libs </title>
   </head>
   <body>
-	  <%= yield %>
+    <div id="title-bar">
+      <p id="title-text"> Angry Libs </p>
+    </div>
+    
+    <div id="content">
+	    <%= yield %>
+    </div>
   </body>
 </html>

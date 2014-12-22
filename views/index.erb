@@ -1,20 +1,13 @@
-<% content_for :stylesheets do %>
-  <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+<% @mad_libs.each do | mad_lib | %>
+  <div class="mad-lib">
+    <p class="mad-lib-title"> <%= mad_lib[1] %> </p>
+    <p class="mad-lib-description"> <%= mad_lib[2] %> </p> <br>  
+    <form method="get" action="/do/<%= mad_lib[0] %>">
+      <button class="mad-lib-button" type="submit">Do this angry lib!</button>
+    </form>
+  </div>
 <% end %>
-<div id="title-bar">
-  <p id="title-text"> Angry Libs </p>
-</div>
 
-<div id="content">
-  <a href="/admin"> Administrator Page</a>
-  
-  <% @mad_libs.each do | mad_lib | %>
-    <div class="mad-lib">
-      <p class="mad-lib-title"> <%= mad_lib[1] %> </p>
-      <p class="mad-lib-description"> <%= mad_lib[2] %> </p> <br>  
-      <form method="get" action="/<%= mad_lib[0] %>">
-        <button type="submit">Do this angry lib!</button>
-      </form>
-    </div>
-  <% end %>
-</div>
+<a class="admin-link" href="/admin"> Administrator Page</a>
+
+

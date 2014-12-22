@@ -1,0 +1,119 @@
+body {
+  margin: 0px;
+  background-color: #585858;
+  font-family: arial;
+}
+
+#title-bar {
+  margin: 0 auto;
+  width: 1000px;
+  height: 70px;
+  background-color: #A4A4A4;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+#title-text {
+  text-align: center;
+  font-size: 50px;
+  margin: 0px;
+}
+
+#content {
+  margin: 25px auto;
+  width: 750px;
+  min-height: 700px;
+  background-color:  #A4A4A4;
+  border: 1px solid #000;
+  border-radius: 5px;
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.mad-lib {
+  background-color: #FFF;
+  border: 1px solid #000;
+  font-size: 18px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.mad-lib-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.mad-lib-description {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mad-lib form {
+  text-align: center;
+}
+
+.mad-lib-button {
+  color: #000;
+}
+
+.admin-link {
+  color: #000;
+  text-decoration: none;
+  margin: 0px 290px; /* could not figure out to automatically center so I hardcoded it */
+  padding: 10px 10px 0px 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.admin-link:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.query-term {
+  width: 353px;
+  margin: 10px auto;
+  padding: 5px;
+
+}
+
+.query-term:nth-child(even) {
+  background-color: #0B3861;
+}
+
+.query-term:nth-child(odd) {
+  background-color: #086A87;
+}
+
+.query-term .label {
+  display: inline-block;
+  margin-right: 20px;
+  width: 200px;
+  text-align: right;
+  color: #FFF;
+}
+
+.create-button {
+  margin: 0px 350px 10px 350px; /* could not figure out to automatically center so I hardcoded it */
+}
+
+.finished-mad-lib-text {
+  margin: 0px;
+  text-align: justify;
+}
+
+.finished-mad-lib {
+  padding: 15px 15px 0px 15px;
+  margin: 15px;
+  border: 1px solid #000;
+  background-color: #FFF;
+}
+
+#mad-lib-back-button {
+  margin: 15px 275px;
+}
