@@ -79,7 +79,6 @@ body {
   width: 353px;
   margin: 10px auto;
   padding: 5px;
-
 }
 
 .query-term:nth-child(even) {
@@ -116,4 +115,27 @@ body {
 
 #mad-lib-back-button {
   margin: 15px 275px;
+}
+
+#mad-lib-error-message {
+  text-align: center;
+  color: #FFF;
+  background-color: #FF0000;
+  padding: 10px 15px;
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+#error-input-box {
+  background-color: #FF0000;
+}
+
+#new-mad-lib {
+  width: 430px;
+  margin: 0 auto;
+}
+
+#new-lib-button {
+  margin: 0px 200px;
 }

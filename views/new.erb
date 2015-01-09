@@ -1,9 +1,15 @@
 <div id="new-mad-lib">
+  <!--
+  <% if @error %>
+    <p id="mad-lib-error-message"><%= @error %></p>
+  <% end %>
+  -->
+  
   <form method="POST">
-    <b>Title:</b><input name="title"><br>
-    <b>Description:</b><input name="description"><br>
-    <b>Text:</b><br> <textarea name="content" rows="5" cols="80"> </textarea><br>
-    <input type="submit" value="Create">
+    <b id="new-text">Title:</b> &nbsp <input name="title"><br>
+    <b class="new-text">Description:</b> &nbsp <input name="description"><br>
+    <b class="new-text">Text:</b><br> <textarea name="content" rows="5" cols="80"> </textarea><br>
+    <input id="new-lib-button" type="submit" value="Create">
   </form>
 </div>
 

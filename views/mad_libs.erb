@@ -1,18 +1,18 @@
-<% @mad_lib_info.each do | mad_lib | %>
-  <div class="mad-lib">
-    <p class="mad-lib-title"> <%= mad_lib[1] %> </p>
-    <p class="mad-lib-description"> <%= mad_lib[2] %> </p> <br>   
-  </div>
-<% end %>
+<div class="mad-lib">
+  <p class="mad-lib-title"> <%= @mad_lib[1] %> </p>
+  <p class="mad-lib-description"> <%= @mad_lib[2] %> </p> <br>   
+</div>
 
 <div class="input-area">
+  <% if @error %>
+    <p id="mad-lib-error-message"><%= @error %></p>
+  <% end %>
+  
   <form method="POST">
-    <% @pattern_array.each do | inputs | %>
+    <% @mad_lib[4].each_with_index do | pattern, i | %>
       <div class="query-term">  
-        <b class="label">
-          <%= inputs %>
-        </b>
-        <input name="input_array[]"><br>
+        <b class="label"><%= pattern %></b>
+        <input id="<%= @box if @error && @input_array[i].length == 0 %>" name="input_array[]" value="<%= @input_array[i] if @error %>"><br>
       </div>
     <% end %>
     <input class="create-button" type="submit" value="Create">
