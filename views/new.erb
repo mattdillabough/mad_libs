@@ -1,14 +1,13 @@
 <div id="new-mad-lib">
-  <!--
   <% if @error %>
     <p id="mad-lib-error-message"><%= @error %></p>
   <% end %>
-  -->
   
   <form method="POST">
-    <b id="new-text">Title:</b> &nbsp <input name="title"><br>
-    <b class="new-text">Description:</b> &nbsp <input name="description"><br>
-    <b class="new-text">Text:</b><br> <textarea name="content" rows="5" cols="80"> </textarea><br>
+    <b>Title:</b> &nbsp <input class="<%='error-input-box' if @error && @title.empty? %>" name="title" value="<%= @title %>"><br>
+    <b>Description:</b> &nbsp <input class="<%='error-input-box' if @error && @description.empty? %>" name="description" value="<%= @description %>"<><br>
+    <b>Text:</b><br>
+    <textarea class="<%='error-input-box' if @error && @content.empty? %>" name="content" rows="5" cols="80"><%= @content %></textarea><br>
     <input id="new-lib-button" type="submit" value="Create">
   </form>
 </div>

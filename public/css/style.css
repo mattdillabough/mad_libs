@@ -127,8 +127,8 @@ body {
   border: 1px solid #000;
 }
 
-#error-input-box {
-  background-color: #FF0000;
+.error-input-box {
+  border-color: #FF0000;
 }
 
 #new-mad-lib {
