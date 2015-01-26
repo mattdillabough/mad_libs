@@ -9,10 +9,11 @@
   <% end %>
   
   <form method="POST">
-    <% @mad_lib[4].each_with_index do | pattern, i | %>
+    <%# ph is the placeholder, like 'noun' or 'adjective' %>
+    <% @mad_lib[4].each_with_index do | ph_and_default, i | %>
       <div class="query-term">  
-        <b class="label"><%= pattern %></b>
-        <input class="<%= 'error-input-box' if @error && @input_array[i].empty? %>" name="input_array[]" value="<%= @input_array[i] if @error %>"><br>
+        <b class="label"><%= ph_and_default[0] %></b>
+        <input class="<%= 'error-input-box' if @error && @input_array[i].empty? %>" name="input_array[]" value="<%= @input_array[i] if @error %>">         <br>
       </div>
     <% end %>
     <input class="create-button" type="submit" value="Create">

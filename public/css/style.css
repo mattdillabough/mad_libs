@@ -1,7 +1,9 @@
 body {
+  width: 1000px;
   margin: 0px;
   background-color: #585858;
   font-family: arial;
+  margin: 0 auto;
 }
 
 #title-bar {
